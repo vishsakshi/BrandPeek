@@ -12,6 +12,7 @@ export default function HomeScreen({ navigation }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Fetch brands when component mounts
     useEffect(() => {
         fetchBrands();
     }, []);
@@ -23,12 +24,14 @@ export default function HomeScreen({ navigation }) {
             const data = await getBrands();
             setBrands(data);
         } catch (e) {
+            // Show user-friendly error message
             setError(e.message || "Failed to load brands");
         } finally {
             setLoading(false);
         }
     };
 
+    // Navigate to brand detail screen when a card is tapped
     const handlePress = (brand) => {
         navigation.navigate("BrandDetail", { brand });
     };

@@ -16,11 +16,13 @@ import Loader from "../components/Loader";
 import ErrorView from "../components/ErrorView";
 
 export default function BrandDetailScreen({ route, navigation }) {
+    // Get the brand passed from home screen navigation
     const { brand } = route.params;
     const [fullBrand, setFullBrand] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Fetch full brand details when screen loads
     useEffect(() => {
         fetchBrandDetails();
     }, []);
@@ -29,6 +31,7 @@ export default function BrandDetailScreen({ route, navigation }) {
         try {
             setError(null);
             setLoading(true);
+            // Fetch complete brand data from API
             const data = await getBrandById(brand.id);
             setFullBrand(data);
         } catch (e) {
@@ -76,7 +79,7 @@ export default function BrandDetailScreen({ route, navigation }) {
                     contentContainerStyle={styles.container}
                     showsVerticalScrollIndicator={false}
                 >
-                    {/* Logo with glow effect */}
+                    {/* Brand logo container */}
                     <View style={styles.logoContainer}>
                         <Image
                             source={brandImages[fullBrand.name]}
@@ -88,7 +91,7 @@ export default function BrandDetailScreen({ route, navigation }) {
                     <Text style={styles.name}>{fullBrand.name}</Text>
                     <Text style={styles.description}>{fullBrand.description}</Text>
 
-                    {/* Brand Overview Card */}
+                    {/* Brand information card */}
                     <View style={styles.card}>
                         <Text style={styles.sectionTitle}>Brand Overview</Text>
                         
@@ -112,7 +115,7 @@ export default function BrandDetailScreen({ route, navigation }) {
                         </View>
                     </View>
 
-                    {/* Brand Focus Section */}
+                    {/* Show tags only if they exist */}
                     {fullBrand.tags?.length > 0 && (
                         <View style={styles.card}>
                             <Text style={styles.sectionTitle}>Brand Focus</Text>

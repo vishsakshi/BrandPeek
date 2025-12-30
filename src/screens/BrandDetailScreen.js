@@ -54,7 +54,7 @@ export default function BrandDetailScreen({ route, navigation }) {
         return (
             <View style={{ flex: 1 }}>
                 <SpotlightBackground />
-                <ErrorView 
+                <ErrorView
                     message={error}
                     onRetry={fetchBrandDetails}
                 />
@@ -71,11 +71,18 @@ export default function BrandDetailScreen({ route, navigation }) {
         );
     }
 
+    console.log(
+        "DETAIL LOGO KEY:",
+        fullBrand.logo,
+        "→",
+        brandImages[fullBrand.logo]
+    );
+
     return (
         <View style={{ flex: 1 }}>
             <SpotlightBackground />
             <SafeAreaView style={{ flex: 1 }} edges={['top']}>
-                <ScrollView 
+                <ScrollView
                     contentContainerStyle={styles.container}
                     showsVerticalScrollIndicator={false}
                 >
@@ -88,13 +95,13 @@ export default function BrandDetailScreen({ route, navigation }) {
                         />
                     </View>
 
-                    <Text style={styles.name}>{fullBrand.name}</Text>
+                    
                     <Text style={styles.description}>{fullBrand.description}</Text>
 
                     {/* Brand information card */}
                     <View style={styles.card}>
                         <Text style={styles.sectionTitle}>Brand Overview</Text>
-                        
+
                         <View style={styles.infoRow}>
                             <Text style={styles.label}>Founded</Text>
                             <Text style={styles.value}>{fullBrand.founded}</Text>
@@ -129,7 +136,7 @@ export default function BrandDetailScreen({ route, navigation }) {
                         </View>
                     )}
 
-                    <TouchableOpacity 
+                    <TouchableOpacity
                         style={styles.button}
                         activeOpacity={0.8}
                     >
@@ -170,7 +177,6 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 32,
         fontFamily: "PoppinsBold",
-        fontWeight: "bold",
         color: "#ffffff",
         marginBottom: 8,
         textAlign: "center",
@@ -198,7 +204,6 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 21,
         fontFamily: "PoppinsBold",
-        fontWeight: "700",
         color: "#ffffff",
         marginBottom: 20,
         letterSpacing: 0.8,
@@ -227,14 +232,12 @@ const styles = StyleSheet.create({
         color: "#aaaaaa",
         textTransform: "uppercase",
         letterSpacing: 1.5,
-        fontWeight: "600",
     },
 
     value: {
         fontSize: 16,
         fontFamily: "PoppinsSemi",
         color: "#ffffff",
-        fontWeight: "600",
         textAlign: "right",
         flex: 1,
         marginLeft: 20,
@@ -268,7 +271,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontFamily: "PoppinsSemi",
         color: "#ffffff",
-        fontWeight: "600",
         letterSpacing: 0.4,
     },
 
@@ -283,13 +285,12 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.2,
         shadowRadius: 8,
-        elevation: 6,
+        elevation: 3,
     },
 
     buttonText: {
         fontSize: 19,
         fontFamily: "PoppinsSemi",
-        fontWeight: "600",
         color: "#000000",
         letterSpacing: 0.5,
     },

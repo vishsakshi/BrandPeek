@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     heading: {
         fontSize: 32,
         fontFamily: "PoppinsBold",
-        fontWeight: "bold",
         color: "#ffffff",
         marginTop: 20,
         marginBottom: 8,

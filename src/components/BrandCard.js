@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
         color: "#ffffff",
         fontSize: 19,
         fontFamily: "PoppinsSemi",
-        fontWeight: "600",
         letterSpacing: 0.3,
         lineHeight: 24,
         marginBottom: 4,

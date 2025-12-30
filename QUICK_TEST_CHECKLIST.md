@@ -1,10 +1,10 @@
-# ⚡ Quick Testing Checklist - BrandPeek
+# Quick Testing Checklist - BrandPeek
 
 Use this checklist while testing. Check each box as you verify it works.
 
 ---
 
-## 🟢 NORMAL FLOW (Must Work)
+##  NORMAL FLOW (Must Work)
 
 ### Home Screen
 - [ ] App opens without crashing
@@ -32,7 +32,7 @@ Use this checklist while testing. Check each box as you verify it works.
 
 ---
 
-## 🔴 ERROR SCENARIOS (Critical - Must Test!)
+##  ERROR SCENARIOS (Critical - Must Test!)
 
 ### Test 1: No Internet on App Open
 **Steps:**
@@ -55,7 +55,7 @@ Use this checklist while testing. Check each box as you verify it works.
 - [ ] Error appears again
 - [ ] Turn internet ON
 - [ ] Tap "Retry"
-- [ ] Brands load successfully ✅
+- [ ] Brands load successfully 
 
 ---
 
@@ -78,7 +78,7 @@ Use this checklist while testing. Check each box as you verify it works.
 **Test Retry:**
 - [ ] Turn internet ON
 - [ ] Tap "Retry"
-- [ ] Brand details load successfully ✅
+- [ ] Brand details load successfully 
 
 ---
 
@@ -118,7 +118,7 @@ const API_BASE_URL = "https://invalid-url.com/api";
 
 ---
 
-## 🎨 VISUAL CHECKS
+##  VISUAL CHECKS
 
 - [ ] Gradient background on ALL screens (home + detail)
 - [ ] Text is readable (white on dark background)
@@ -131,7 +131,7 @@ const API_BASE_URL = "https://invalid-url.com/api";
 
 ---
 
-## ⚡ PERFORMANCE CHECKS
+## PERFORMANCE CHECKS
 
 - [ ] App loads within 3 seconds (good internet)
 - [ ] Smooth scrolling (no lag)
@@ -140,7 +140,7 @@ const API_BASE_URL = "https://invalid-url.com/api";
 
 ---
 
-## 📱 DEVICE COMPATIBILITY
+## DEVICE COMPATIBILITY
 
 Test on at least 2 devices:
 - [ ] iPhone (or iOS Simulator)
@@ -150,7 +150,7 @@ Both should work identically!
 
 ---
 
-## 🎥 SCREEN RECORDING CHECKLIST
+## SCREEN RECORDING CHECKLIST
 
 Before recording, ensure:
 - [ ] All normal flows work
@@ -161,7 +161,7 @@ Before recording, ensure:
 
 ---
 
-## ✅ FINAL VERIFICATION
+## FINAL VERIFICATION
 
 Before submission:
 - [ ] All ✅ items above are checked
@@ -200,5 +200,5 @@ Before submission:
 
 ---
 
-**Print this checklist and test systematically! 🚀**
+**Print this checklist and test systematically!**
 

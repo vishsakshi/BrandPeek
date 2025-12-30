@@ -143,5 +143,5 @@ The Expo Go QR code or APK build link will be shared as part of the submission.
 - Clean code structure
 - Expo Go deployment ready
 
-## Contact
+
 For questions or issues, please refer to the repository.

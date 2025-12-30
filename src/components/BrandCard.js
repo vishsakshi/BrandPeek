@@ -5,6 +5,7 @@ import { brandImages } from "../constants/brandImages";
 export default function BrandCard({ brand, onPress }) {
     return (
         <TouchableOpacity style={styles.card} onPress={onPress}>
+            {/* Brand logo */}
             <View style={styles.logoContainer}>
                 <Image
                     source={brandImages[brand.name]}
@@ -12,6 +13,7 @@ export default function BrandCard({ brand, onPress }) {
                 />
             </View>
 
+            {/* Brand name and tagline */}
             <View style={styles.textContainer}>
                 <Text style={styles.name}>{brand.name}</Text>
                 {brand.tagline && (

@@ -5,6 +5,7 @@ export default function Loader({ message }) {
   return (
     <View style={styles.container}>
       <ActivityIndicator size="large" color="#ffffff" />
+      {/* Optional loading message */}
       {message && <Text style={styles.text}>{message}</Text>}
     </View>
   );

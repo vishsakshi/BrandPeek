@@ -8,6 +8,7 @@ export default function ErrorView({ message, onRetry }) {
       <Text style={styles.text}>
         {message || "Something went wrong"}
       </Text>
+      {/* Show retry button only if onRetry function is provided */}
       {onRetry && (
         <TouchableOpacity style={styles.retryButton} onPress={onRetry}>
           <Text style={styles.retryText}>Retry</Text>

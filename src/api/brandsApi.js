@@ -2,9 +2,9 @@ import axios from "axios";
 
 const API_BASE_URL = "https://6953a3b7a319a928023c1c63.mockapi.io/api";
 
-// Add timeout to prevent hanging requests
+// Create axios instance with timeout to prevent requests from hanging forever
 const axiosInstance = axios.create({
-  timeout: 10000, // 10 seconds
+  timeout: 10000, // 10 seconds seems reasonable
 });
 
 export async function getBrands() {
@@ -14,7 +14,7 @@ export async function getBrands() {
   } catch (error) {
     console.error("Error fetching brands:", error);
     
-    // Handle different error types
+    // Handle different types of errors and show appropriate messages
     if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
       throw new Error("Request timed out. Please check your connection.");
     }
@@ -39,7 +39,7 @@ export async function getBrandById(id) {
   } catch (error) {
     console.error(`Error fetching brand ${id}:`, error);
     
-    // Handle different error types
+    // Same error handling logic as getBrands
     if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
       throw new Error("Request timed out. Please check your connection.");
     }

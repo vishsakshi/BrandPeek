@@ -5,11 +5,11 @@ import Svg, { Defs, RadialGradient, Rect, Stop } from "react-native-svg";
 const { width, height } = Dimensions.get("window");
 
 export default function SpotlightBackground() {
-  // Use percentage-based coordinates for proper rendering
-  // Smaller radius = more concentrated, visible gradient
-  const centerX = "50%";  // Horizontal center (50% = middle)
-  const centerY = "0%";  // Vertical position (lower % = higher up, 0% = top)
-  const radius = "60%";    // Size of the gradient circle
+  // Position the gradient center at top center of screen
+  // Using percentages so it works on all screen sizes
+  const centerX = "50%";  // Center horizontally
+  const centerY = "0%";   // Top of screen
+  const radius = "60%";   // Gradient radius - adjusted to match design
 
   return (
     <Svg

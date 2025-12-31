@@ -63,7 +63,6 @@ const styles = StyleSheet.create({
         color: "#cccccc",
         fontSize: 14,
         fontFamily: "PoppinsSemi",
-        fontWeight: "400",
         opacity: 0.9,
         lineHeight: 18,
         letterSpacing: 0.2,

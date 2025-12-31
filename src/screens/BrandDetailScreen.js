@@ -71,13 +71,6 @@ export default function BrandDetailScreen({ route, navigation }) {
         );
     }
 
-    console.log(
-        "DETAIL LOGO KEY:",
-        fullBrand.logo,
-        "→",
-        brandImages[fullBrand.logo]
-    );
-
     return (
         <View style={{ flex: 1 }}>
             <SpotlightBackground />

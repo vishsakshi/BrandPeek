@@ -47,6 +47,5 @@ const styles = StyleSheet.create({
   retryText: {
     color: "#ffffff",
     fontSize: 16,
-    fontWeight: "600",
   },
 });
